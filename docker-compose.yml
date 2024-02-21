@@ -6,6 +6,8 @@ services:
       - static:/static
     env_file:
       - .env
+    environment:
+      - name=value
     build:
       context: .
     ports:

@@ -19,11 +19,11 @@ ALLOWED_HOSTS = [
     'django'
 ]
 
-
+# new
 CSRF_TRUSTED_ORIGINS = [
-    'http://localhost'
+    'http://localhost',
+    'http://ec2-51-20-251-234.eu-north-1.compute.amazonaws.com'
 ]
-
 
 # Application definition
 
@@ -46,6 +46,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', #new
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
